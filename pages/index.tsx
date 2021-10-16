@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
 const Home: NextPage = () => {
   return (
@@ -12,11 +12,20 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>yolo</h1>
+        <nav className="flex justify-around bg-black text-white">
+          <Link href="/"> home</Link>
+          <Link href="/blog"> blog</Link>
+          <Link href="/yolo"> swag</Link>
+          <Link href="/yolo"> yolo</Link>
+        </nav>
+        <div className="container mx-auto h-40 flex flex-row justify-between  gap-2.5	">
+          <div className="h-full bg-blue-400 flex-1" />
+          <div className="h-full bg-blue-400 flex-1" />
+          <div className="h-full bg-blue-400 flex-1" />
+        </div>
       </main>
+    </>
+  );
+};
 
-      </>
-  )
-}
-
-export default Home
+export default Home;
